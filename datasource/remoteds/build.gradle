@@ -1,0 +1,21 @@
+apply plugin: 'kotlin'
+apply from: "../../dependencies.gradle"
+
+dependencies {
+    //noinspection DifferentStdlibGradleVersion
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+
+    implementation rest.client
+    implementation rest.converter
+
+    implementation koin.core
+
+    implementation project (":Models")
+    implementation project (":Repository")
+
+    testImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0"
+    testImplementation test.junit5
+    testImplementation test.koin
+
+}

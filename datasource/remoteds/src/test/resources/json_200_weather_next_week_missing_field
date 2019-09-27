@@ -1,0 +1,15 @@
+{
+   "latitude":48.8534,
+   "longitude":2.3488,
+   "timezone":"Europe/Paris",
+   "hourly":{
+      "summary":"Ciel couvert toute la journée.",
+      "icon":"rain",
+      "data":[
+         {
+            "time":1570226400,
+         }
+      ]
+   },
+   "offset":2
+}

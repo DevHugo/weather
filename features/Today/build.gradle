@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: "../../common_module.gradle"
+
+dependencies {
+
+    implementation androidxDependencies.coreKtx
+    implementation androidxDependencies.app
+    implementation constraintlayout
+
+    implementation koin.android
+    implementation koin.viewmodel
+
+    implementation project(':viewmodel:TodayViewModel')
+    implementation project(':Models')
+
+    testImplementation "io.mockk:mockk:1.9.3.kotlin12"
+    testImplementation test.koin
+    testImplementation test.fragment
+    testImplementation test.robolectric
+    testImplementation test.runner
+    testImplementation project(':tests:TestUiCommon')
+
+    androidTestImplementation "io.mockk:mockk-android:1.9.3.kotlin12"
+    androidTestImplementation test.koin
+    androidTestImplementation test.core
+    androidTestImplementation test.monitor
+    androidTestImplementation test.fragment
+    androidTestImplementation test.runner
+    androidTestImplementation test.espresso
+    androidTestImplementation test.espressojunit
+    androidTestImplementation project(':tests:TestUiCommon')
+
+}

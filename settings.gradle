@@ -1,0 +1,2 @@
+include ':app', ':features:Today', ':features:Weekly', ':tests:TestUiCommon', ':viewmodel:TodayViewModel', ':viewmodel:WeeklyViewModel', ':Repository', ':Models', 'datasource:localds', 'datasource:remoteds'
+rootProject.name='Weather'

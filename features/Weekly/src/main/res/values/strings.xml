@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weekly_title">Cette semaine</string>
+    <string name="weekly_subtitle">Prévision sur 7 jours</string>
+</resources>

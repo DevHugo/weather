@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="today_title_details">Détails</string>
+    <string name="today_subtitle_currentweather">Météo actuelle</string>
+    <string name="today_temperatures">Températures</string>
+    <string name="today_rain">Précipitations</string>
+    <string name="today_wind">Vitesse du vent</string>
+    <string name="today_cloudcover">Nuage</string>
+    <string name="placeholder_pourcentage">X%</string>
+    <string name="placeholder_kmh">X km/h</string>
+    <string name="placeholder_temp_min_max">X° | X°</string>
+    <string name="placeholder_temp">X°C</string>
+</resources>

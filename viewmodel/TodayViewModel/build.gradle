@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: "../../common_module.gradle"
+
+dependencies {
+    implementation project(':Models')
+    implementation project(':Repository')
+
+    implementation koin.android
+    implementation koin.viewmodel
+    implementation koin.scope
+    implementation koin.exp
+
+    implementation androidxDependencies.lifecycle
+    implementation androidxDependencies.lifecycleViewModel
+    implementation androidxDependencies.runtimeKtx
+    implementation androidxDependencies.lifecycleLiveDataKtx
+
+    testImplementation project(':tests:TestUiCommon')
+
+    testImplementation test.junit5
+    testImplementation test.core
+    testImplementation test.liveDataTesting
+}

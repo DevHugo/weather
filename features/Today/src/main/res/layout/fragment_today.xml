@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/v_today_headerbackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/g_today_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="@color/sky" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_current_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/placeholder_temp"
+        android:textColor="@color/header_text"
+        android:textSize="@dimen/textsize_today_headertemperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="20°C" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        android:textColor="@color/header_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_today_current_temperature"
+        tools:text="Ciel couvert" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_today_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/g_today_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_today_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/height_today_header" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/today_title_details"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/textsize_all_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/g_today_header" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/today_subtitle_currentweather"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/tv_today_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_today_title" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="@+id/tv_today_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_today_subtitle"
+        app:srcCompat="@drawable/ic_thermometer" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_temperatures_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/today_temperatures"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_today_subtitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_temperatures_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/placeholder_temp_min_max"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/tv_today_temperatures_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_today_temperatures_label"
+        tools:text="14° | 20°" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_rainfall_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/today_rain"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toEndOf="@+id/iv_today_rainfall"
+        app:layout_constraintTop_toBottomOf="@+id/tv_today_temperatures_value" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_today_rainfall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_today_temperatures_value"
+        app:srcCompat="@drawable/ic_rain" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_rainfall_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/placeholder_pourcentage"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/tv_today_rainfall_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_today_rainfall_label"
+        tools:text="11%°" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_wind_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/today_wind"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_today_temperatures_label" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_today_wind"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toStartOf="@+id/tv_today_wind_label"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView"
+        app:srcCompat="@drawable/ic_wind" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_wind_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/placeholder_kmh"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/tv_today_wind_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_today_wind_label"
+        tools:text="20 km/h" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_cloudcover_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/today_cloudcover"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/tv_today_wind_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_today_rainfall_label" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_today_cloudcover"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="@+id/iv_today_wind"
+        app:layout_constraintTop_toTopOf="@+id/iv_today_rainfall"
+        app:srcCompat="@drawable/ic_cloud" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today_cloudcover_value"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:text="@string/placeholder_pourcentage"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="@+id/tv_today_wind_value"
+        app:layout_constraintTop_toTopOf="@+id/tv_today_rainfall_value"
+        tools:text="80 %" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

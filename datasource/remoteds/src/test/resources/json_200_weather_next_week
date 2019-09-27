@@ -1,0 +1,23 @@
+{
+   "latitude":48.8534,
+   "longitude":2.3488,
+   "timezone":"Europe/Paris",
+   "daily":{
+      "summary":"Ciel couvert toute la journée.",
+      "icon":"rain",
+      "data":[
+         {
+            "time":1570226400,
+            "summary":"Ciel Nuageux",
+            "icon":"partly-cloudy-night",
+            "precipProbability":0.13,
+            "temperature":14.26,
+            "apparentTemperature":14.26,
+            "humidity":0.81,
+            "windSpeed":4.07,
+            "cloudCover":0.77
+         }
+      ]
+   },
+   "offset":2
+}

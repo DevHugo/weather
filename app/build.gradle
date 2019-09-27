@@ -1,0 +1,51 @@
+apply from: "../dependencies.gradle"
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion project.sdkVersion.toInteger()
+    defaultConfig {
+        applicationId "com.weather"
+        minSdkVersion project.minSdkVersion.toInteger()
+        targetSdkVersion project.sdkVersion.toInteger()
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation kotlin
+
+    implementation androidxDependencies.coreKtx
+    implementation androidxDependencies.app
+
+    implementation constraintlayout
+
+    implementation project(':features:Today')
+    implementation project(':features:Weekly')
+    implementation project(':viewmodel:TodayViewModel')
+    implementation project(':viewmodel:WeeklyViewModel')
+    implementation project(':Repository')
+    implementation project(':datasource:localds')
+    implementation project(':datasource:remoteds')
+
+    implementation koin.android
+    implementation koin.scope
+    implementation koin.viewmodel
+    implementation koin.exp
+
+    testImplementation test.junit
+
+    androidTestImplementation test.runner
+    androidTestImplementation test.espresso
+}

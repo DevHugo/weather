@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply from: "../../common_module.gradle"
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+
+    implementation androidxDependencies.lifecycle
+
+    implementation room.runtime
+    implementation room.ktx
+    kapt room.compilateur
+
+    implementation koin.android
+
+    implementation project (":Models")
+    implementation project (":Repository")
+
+    testImplementation test.junit5
+    testImplementation test.junit5Vintage
+    testImplementation test.robolectric
+    testImplementation test.runner
+
+    androidTestImplementation test.core
+    androidTestImplementation test.monitor
+    androidTestImplementation test.runner
+    androidTestImplementation test.espresso
+    androidTestImplementation test.espressojunit
+    androidTestImplementation project(':tests:TestUiCommon')
+}

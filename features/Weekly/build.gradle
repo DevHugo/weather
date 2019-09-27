@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: "../../dependencies.gradle"
+apply from: "../../common_module.gradle"
+
+dependencies {
+
+    implementation androidxDependencies.coreKtx
+    implementation androidxDependencies.app
+    implementation androidxDependencies.recyclerview
+    implementation constraintlayout
+
+    implementation koin.android
+    implementation koin.viewmodel
+
+    implementation project(':viewmodel:WeeklyViewModel')
+    implementation project(':Models')
+
+    testImplementation test.fragment
+    testImplementation test.robolectric
+    testImplementation test.runner
+    testImplementation project(':tests:TestUiCommon')
+
+    androidTestImplementation test.core
+    androidTestImplementation test.monitor
+    androidTestImplementation test.fragment
+    androidTestImplementation test.runner
+    androidTestImplementation test.espresso
+    androidTestImplementation test.espressojunit
+    androidTestImplementation project(':tests:TestUiCommon')
+
+}
