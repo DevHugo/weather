@@ -6,6 +6,13 @@ apply plugin: 'kotlin-android-extensions'
 apply from: "../../dependencies.gradle"
 apply from: "../../common_module.gradle"
 
+android {
+    lintOptions{
+        disable "ResourceType"
+        disable "VectorPath"
+    }
+}
+
 dependencies {
 
     implementation androidxDependencies.coreKtx
