@@ -7,7 +7,7 @@ Je suis loin d'avoir fini tout ce que j'avais envie de faire mais je pense que c
 
 ## Application
 
-Elle est trés simple, affichage des données métérologique en haut et en bas les prévisions sur 7 jours
+Elle est trés simple, affichage des données métérologique en haut et en bas les prévisions sur 7 jours. Cache de 24h pour les données offline.
 
 ![Image de l'application](screenshoot/app.png "Title")
 
@@ -37,6 +37,7 @@ Les patterns utilisé dans l'app:
 
 ## Idées d'amélioration fonctionelle
 
+ - Vidé le cache de la bdd de temps en temps
  - Avoir un systéme de rafraichissement avec pull to refresh
  - Changer le bandeau en fonction de la météo actuelle
  - Avoir un message d'erreur quand pas de connexion
