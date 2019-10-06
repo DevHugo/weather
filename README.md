@@ -1,5 +1,4 @@
 # Weather
-A simple weather app
 
 Timebox: 4h de code et 15/20 minutes de rédaction du README.
 Je suis loin d'avoir fini tout ce que j'avais envie de faire mais je pense que c'est assez pour évaluer le niveau.
