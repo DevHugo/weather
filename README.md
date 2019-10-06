@@ -65,4 +65,4 @@ Sinon les autres modules, "viewmodel", "repository" et "datasource" ont des test
 
 Une petite particularité pour Les tests d'intégration sont dans le dossier sharedTest des différents modules comme par-exemple pour le module Today.
 Depuis les nouvelles versions majeures de Robolectric, on peut utiliser la syntaxe espresso.
-Les stocker dans sharedTest permet de partager les tests entre Robolectric et les tests Espresso. Comme ça on peut lancer au choix sur un devices ou sur vrai téléphone.
+Les stocker dans sharedTest permet de partager les tests entre Robolectric et les tests Espresso. Comme ça on peut lancer au choix sur la JVM ou sur vrai téléphone.
