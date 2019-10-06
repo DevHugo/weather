@@ -9,6 +9,12 @@ Elle est trés simple, affichage des données métérologique en haut et en bas 
 
 ![Image de l'application](screenshoot/app.png "Title")
 
+## Installation
+
+Juste ouvrir le projet dans Android Studio, la clée d'API est commité avec le code, à partager avec les bots qui aspirerons la clée :p.
+
+Y'a un apk sinon à la racine du projet
+
 ## Architecture
 
 Architecture modulaire sous un pattern MVVM.
