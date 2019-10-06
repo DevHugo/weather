@@ -4,7 +4,13 @@ A simple weather app
 Timebox: 4h de code et 15/20 minutes de rédaction du README.
 Je suis loin d'avoir fini tout ce que j'avais envie de faire mais je pense que c'est assez pour évaluer le niveau.
 
-Architecture
+## Application
+
+Elle est trés simple, affichage des données métérologique en haut et en bas les prévisions sur 7 jours
+
+![Image de l'application](screenshoot/app.png "Title")
+
+## Architecture
 
 Architecture modulaire sous un pattern MVVM.
 
@@ -31,7 +37,7 @@ Les patterns utilisé dans l'app:
  - Utiliser la géolocalisation pour connaitre la météo locale
  - Intégrer l'app avec Google Assistant
 
- ## Idées d'amélioration technique
+## Idées d'amélioration technique
 
   - Partir sur du vrai git flow et pas sur un initial commit :p désolé, mais j'avais pas le temps.
   - Des dépendences dans les build.gradle ne sont variabilisé
