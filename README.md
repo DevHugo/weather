@@ -57,12 +57,11 @@ Les patterns utilisé dans l'app:
 
 ## Tests unitaires et d'intégration
 
-Les tests d'intégration sont dans le dossier sharedTest des différents modules comme par-exemple celui de Today.
-Depuis les nouvelles versions majeures de Robolectric, on peut utiliser la syntaxe espresso.
-Les stoker dans sharedTest permet de partager les tests entre Robolectric pour les lancer dans la JVM et les tests Espresso pour les lancer sur un device.
-
 Comme pattern pour les tests, je suis resté dans le simple avec le pattern Robot pour séparer le Quoi du Comment.
 Je suis beaucoup inspiré de [cette conférence de Jake Wharton](https://jakewharton.com/testing-robots/).
 
-Sinon les autres modules, "viewmodel", "repository" et "datasource" ont des tests d'intégration simple ou des tests unitaire quand le module est en kotlin sans dépendences vers kotlin.
- 
+Sinon les autres modules, "viewmodel", "repository" et "datasource" ont des tests d'intégration simple ou des tests unitaire quand le module est en kotlin sans dépendences vers Android.
+
+Une petite particularité pour Les tests d'intégration sont dans le dossier sharedTest des différents modules comme par-exemple pour le module Today.
+Depuis les nouvelles versions majeures de Robolectric, on peut utiliser la syntaxe espresso.
+Les stocker dans sharedTest permet de partager les tests entre Robolectric et les tests Espresso. Comme ça on peut lancer au choix sur un devices ou sur vrai téléphone.
