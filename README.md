@@ -58,7 +58,7 @@ Les patterns utilisé dans l'app:
 
 ## Tests unitaires et d'intégration
 
-Comme pattern pour les tests, je suis resté dans le simple avec le pattern Robot pour séparer le Quoi du Comment.
+Comme pattern pour les tests UI (module Today), je suis resté dans le simple avec le pattern Robot pour séparer le Quoi du Comment.
 Je suis beaucoup inspiré de [cette conférence de Jake Wharton](https://jakewharton.com/testing-robots/).
 
 Sinon les autres modules, "viewmodel", "repository" et "datasource" ont des tests d'intégration simple ou des tests unitaire quand le module est en kotlin sans dépendences vers Android.
